@@ -11,7 +11,7 @@ const fallback = (identifier: string) => ({
 
 const limiter = new Ratelimit({
   rootKey: process.env.UNKEY_ROOT_KEY!,
-  duration: 60 * 60 * 1000, // 1 hour
+  duration: 3600000, // 1 hour
   limit: 3,
   namespace: "waitlist",
   timeout: {
