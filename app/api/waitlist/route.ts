@@ -13,6 +13,7 @@ const limiter = new Ratelimit({
   rootKey: process.env.UNKEY_ROOT_KEY!,
   duration: 3600000, // 1 hour
   limit: 3,
+  async: false,
   namespace: "waitlist",
   timeout: {
     ms: 3000, // only wait 3s at most before returning the fallback
